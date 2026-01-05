@@ -5,9 +5,9 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, 
                                QLabel, QLineEdit, QPushButton, QComboBox, QTextEdit, QFileDialog, 
                                QGroupBox, QMessageBox, QProgressBar, QSplitter)
 from PySide6.QtCore import Qt, QThread, Signal, Slot
-from backend import SSHManager
-from remote_browser import RemoteFileBrowser  # [NEW] Import
-from settings import SettingsManager  # [NEW] Import
+from .backend import SSHManager
+from .remote_browser import RemoteFileBrowser  # [NEW] Import
+from .settings import SettingsManager  # [NEW] Import
 
 from PySide6.QtGui import QIcon, QAction, QPalette, QColor, QFont
 
@@ -703,13 +703,4 @@ class QLogHandler(logging.Handler):
         # 通过信号重新路由所有日志更安全，但目前只需坚持从 Worker 返回消息。
         pass
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    
-    # 可选: 应用暗黑主题或样式
-    # app.setStyle("Fusion") # Moved inside apply_dark_theme
-    apply_dark_theme(app)
-    
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
+

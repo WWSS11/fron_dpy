@@ -31,7 +31,7 @@ nuitka --standalone --onefile ^
     --product-name="Frontend Deployment Tool" ^
     --file-version=1.0.0.0 ^
     --copyright="Copyright (c) 2025" ^
-    main.py
+    run.py
 
 echo.
 if %errorlevel% neq 0 (
