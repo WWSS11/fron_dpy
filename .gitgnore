@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# IDE Settings
+.vscode/
+.idea/
+*.swp
+
+# Nuitka / Build Artifacts
+build/
+dist/
+*.dist/
+*.build/
+*.onefile-build/
+nuitka-crash-report.xml
+
+# Runtime & Local Config (Don't commit secrets)
+secret.key
+app_config.json
+*.log
