@@ -1,0 +1,3 @@
+paramiko
+PySide6
+cryptography
